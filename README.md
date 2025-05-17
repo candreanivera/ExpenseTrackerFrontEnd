@@ -42,7 +42,7 @@ npm start
 Then open your browser and go to:
 http://localhost:3000
 
-5.:star: Configuration
+5. :star: Configuration
 Make sure to update the API base URL in your code (typically in an Axios config file or environment variable) to point to your backend, such as:
 
 javascript
