@@ -23,7 +23,7 @@ ExpenseTrackerFrontEnd is the user interface for the Expense Tracker system. It 
 ### Installation
 
 1.⭐  Clone the repository:
-   ```bash
+   ``bash
    git clone https://github.com/candreanivera/ExpenseTrackerFrontEnd.git
 
 2.⭐  Navigate to the project folder:
