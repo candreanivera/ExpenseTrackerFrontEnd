@@ -22,41 +22,36 @@ ExpenseTrackerFrontEnd is the user interface for the Expense Tracker system. It 
 
 ### Installation
 
-1.⭐  Clone the repository:
-   ``bash
+1.⭐ Clone the repository:
    git clone https://github.com/candreanivera/ExpenseTrackerFrontEnd.git
 
-2.⭐  Navigate to the project folder:
-bash
-cd ExpenseTrackerFrontEnd
+2.⭐ Navigate to the project folder:
+    cd ExpenseTrackerFrontEnd
 
-3.⭐  Install dependencies:
-bash
-npm install
+3.⭐ Install dependencies:
+    npm install
 
-4.⭐  Running the App
-Start the development server:
-bash
-npm start
+4.⭐ Running the App
+    Start the development server:
+    npm start
 
-Then open your browser and go to:
-http://localhost:3000
+    Then open your browser and go to:
+    http://localhost:3000
 
-5.⭐  Configuration
-Make sure to update the API base URL in your code (typically in an Axios config file or environment variable) to point to your backend, such as:
+5.⭐ Configuration
+    Make sure to update the API base URL in your code (typically in an Axios config file or environment variable) to point to your backend, such as:
 
-javascript
-http://localhost:5000/api
+    http://localhost:5000/api
 
-6.⭐  Features
-View list of expenses and categories
-Add new expenses and categories
-Edit or delete existing entries
-Clean, responsive UI
+6.⭐ Features
+    View list of expenses
+    Add new expenses
+    Edit or delete existing entries
+    Clean, responsive UI
 
-7.⭐  Notes
-Ensure CORS is enabled on the backend if you're running both frontend and backend separately.
+7.⭐ Notes
+    Ensure CORS is enabled on the backend if you're running both frontend and backend separately.
 
-You can deploy this project using platforms like Vercel, Netlify, or GitHub Pages.
+    You can deploy this project using platforms like Vercel, Netlify, or GitHub Pages.
 
 ![alt text](image.png)
