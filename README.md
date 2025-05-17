@@ -58,3 +58,5 @@ Clean, responsive UI
 Ensure CORS is enabled on the backend if you're running both frontend and backend separately.
 
 You can deploy this project using platforms like Vercel, Netlify, or GitHub Pages.
+
+![alt text](image.png)
