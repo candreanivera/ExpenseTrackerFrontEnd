@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/ExpenseTrackerFrontEnd/static/css/main.32e9fb38.css",
-    "main.js": "/ExpenseTrackerFrontEnd/static/js/main.bc29f638.js",
+    "main.js": "/ExpenseTrackerFrontEnd/static/js/main.aed28fdf.js",
     "index.html": "/ExpenseTrackerFrontEnd/index.html"
   },
   "entrypoints": [
     "static/css/main.32e9fb38.css",
-    "static/js/main.bc29f638.js"
+    "static/js/main.aed28fdf.js"
   ]
 }
