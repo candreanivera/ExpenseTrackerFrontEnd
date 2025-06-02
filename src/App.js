@@ -27,9 +27,12 @@ function App() {
 
   //DELETE EXPENSE
   const handleDeleteExpense = async (id) => {
-    const res = await fetch(`http://localhost:5186/api/expenses/${id}`, {
-      method: "DELETE",
-    });
+    const res = await fetch(
+      `https://expensetrackerbackend-1-r4ic.onrender.com/api/expenses/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
     if (res.ok) {
       //Removes the eliminated expense from the local list
       setExpenses(expenses.filter((exp) => exp.id !== id));
@@ -40,11 +43,14 @@ function App() {
 
   //EDIT EXPENSE
   const handleEditExpense = async (id, updatedExpense) => {
-    const res = await fetch(`http://localhost:5186/api/expenses/${id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(updatedExpense),
-    });
+    const res = await fetch(
+      `https://expensetrackerbackend-1-r4ic.onrender.com/api/expenses/${id}`,
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedExpense),
+      }
+    );
 
     if (res.ok) {
       const updated = await res.json();
