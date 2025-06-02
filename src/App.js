@@ -14,7 +14,7 @@ function App() {
   //res: Server's answer. res.json() transforms the answer in a javascript object
   //then result is passed to setExpenses, so expenses can be updated
   useEffect(() => {
-    fetch("https://expensetrackerbackend-1-r4ic.onrender.com/")
+    fetch("https://expensetrackerbackend-1-r4ic.onrender.com")
       .then((res) => res.json())
       .then((data) => setExpenses(data));
     //expenses value will be replaced by the value obtained from the server
