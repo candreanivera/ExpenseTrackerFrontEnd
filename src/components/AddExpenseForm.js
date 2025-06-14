@@ -12,6 +12,8 @@ function AddExpenseForm({ onAdd }) {
 
   const [errors, setErrors] = useState({});
 
+  const API_BASE_URL = process.env.REACT_APP_API_URL;
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     setErrors((prevErrors) => ({ ...prevErrors, [e.target.name]: "" }));
@@ -54,7 +56,7 @@ function AddExpenseForm({ onAdd }) {
     if (!validateForm()) return;
 
     //If validations are OK we call the API with POST
-    fetch("https://expensetrackerbackend-1-r4ic.onrender.com/api/expenses", {
+    fetch(`${API_BASE_URL}/api/expenses`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

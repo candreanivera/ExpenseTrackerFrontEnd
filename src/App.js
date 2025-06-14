@@ -10,15 +10,18 @@ function App() {
   // To obtain the current month
   const currentMonth = new Date().toLocaleString("en-US", { month: "long" });
 
+  //Defining environment variables
+  const API_BASE_URL = process.env.REACT_APP_API_URL;
+
   //Hook used to call the API
   //res: Server's answer. res.json() transforms the answer in a javascript object
   //then result is passed to setExpenses, so expenses can be updated
   useEffect(() => {
-    fetch("https://expensetrackerbackend-1-r4ic.onrender.com/api/expenses")
+    fetch(`${API_BASE_URL}/api/expenses`)
       .then((res) => res.json())
       .then((data) => setExpenses(data));
     //expenses value will be replaced by the value obtained from the server
-  }, []);
+  }, [API_BASE_URL]);
 
   //ADD EXPENSES
   const handleAddExpense = (newExpense) => {
@@ -27,12 +30,9 @@ function App() {
 
   //DELETE EXPENSE
   const handleDeleteExpense = async (id) => {
-    const res = await fetch(
-      `https://expensetrackerbackend-1-r4ic.onrender.com/api/expenses/${id}`,
-      {
-        method: "DELETE",
-      }
-    );
+    const res = await fetch(`${API_BASE_URL}/api/expenses/${id}`, {
+      method: "DELETE",
+    });
     if (res.ok) {
       //Removes the eliminated expense from the local list
       setExpenses(expenses.filter((exp) => exp.id !== id));
@@ -43,14 +43,11 @@ function App() {
 
   //EDIT EXPENSE
   const handleEditExpense = async (id, updatedExpense) => {
-    const res = await fetch(
-      `https://expensetrackerbackend-1-r4ic.onrender.com/api/expenses/${id}`,
-      {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updatedExpense),
-      }
-    );
+    const res = await fetch(`${API_BASE_URL}/api/expenses/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updatedExpense),
+    });
 
     if (res.ok) {
       const updated = await res.json();
